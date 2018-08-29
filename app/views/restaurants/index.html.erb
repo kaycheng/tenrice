@@ -1,0 +1,18 @@
+<h1 class="text-center">拾飯</h1>
+
+<table>
+  <thead>
+    <th>餐廳</th>
+    <th>營業時間</th>
+    <th>描述</th>
+    <th>照片</th>
+  </thead>
+  <% @restaurants.each do |restaurant| %>
+    <tbody>
+      <td><%= restaurant.title %></td>
+      <td><%= restaurant.open_hours %></td>
+      <td><%= restaurant.description %></td>
+      <td><%= restaurant.photo if restaurant.photo %></td>  
+    </tbody>
+  <% end %>
+</table>
