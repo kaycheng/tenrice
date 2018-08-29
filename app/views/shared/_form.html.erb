@@ -10,7 +10,8 @@
   <%= f.text_area :description, text_html: { rows: 6 } %>
 
   <%= f.label :photo, "餐廳照片" %>
-  <%= f.text_field :photo %>
+  <%= image_tag(@restaurant.photo, width: "300px") if @restaurant.photo.attached? %>
+  <%= f.file_field :photo %>
 
   <%= f.submit %>
 

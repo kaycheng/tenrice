@@ -2,7 +2,7 @@
 
 <h3><%= @restaurant.open_hours %></h3>
 <h3><%= simple_format(@restaurant.description) %></h3>
-<%= @restaurant.photo %>
+<%= image_tag(@restaurant.photo ,width: '300px') if @restaurant.photo.attached?  %>
 
 <br />
 <%= link_to "回首頁", restaurants_path %>

@@ -14,7 +14,7 @@
       <td><%= restaurant.title %></td>
       <td><%= restaurant.open_hours %></td>
       <td><%= restaurant.description %></td>
-      <td><%= restaurant.photo if restaurant.photo %></td>  
+      <td><%= image_tag(restaurant.photo, width: '100px') if restaurant.photo.attached? %></td>  
       <td>
         <%= link_to "修改餐廳資料", edit_restaurant_path(restaurant) %> |
         <%= link_to "刪除餐廳資料", restaurant_path(restaurant), method: :delete, data: { confirm: "確定刪除？" } %>
