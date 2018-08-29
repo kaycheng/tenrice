@@ -1,0 +1,17 @@
+<%= form_for @restaurant do |f| %>
+  
+  <%= f.label :title, "餐廳名稱" %>
+  <%= f.text_field :title, placeholder: true %>
+
+  <%= f.label :open_hours, "餐廳營業時間" %>
+  <%= f.text_field :open_hours %>
+
+  <%= f.label :description, "餐廳描述" %>
+  <%= f.text_area :description, text_html: { rows: 6 } %>
+
+  <%= f.label :photo, "餐廳照片" %>
+  <%= f.text_field :photo %>
+
+  <%= f.submit %>
+
+<% end %>
