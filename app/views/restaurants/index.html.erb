@@ -11,7 +11,7 @@
   </thead>
   <% @restaurants.each do |restaurant| %>
     <tbody>
-      <td><%= restaurant.title %></td>
+      <td><%= restaurant.article %></td>
       <td><%= restaurant.open_hours %></td>
       <td><%= restaurant.description %></td>
       <td><%= image_tag(restaurant.photo, width: '100px') if restaurant.photo.attached? %></td>  
