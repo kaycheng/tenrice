@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-10 offset-1">
+      <div class="row">
+
+        <div class="col-12 col-md-4">
+          <h2><%= @restaurant.article %></h2>
+          <h4><%= @restaurant.open_hours %></h4>
+          <%= image_tag(@restaurant.photo ,width: '300px') if @restaurant.photo.attached?  %>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <p><%= simple_format(@restaurant.description) %></p>
+        </div>
+
+      </div>
+      
+      
+
+    </div>
+  </div>
+</div>
+
+<br />
+<%= link_to "回首頁", restaurants_path %>

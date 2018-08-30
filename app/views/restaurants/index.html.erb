@@ -1,0 +1,25 @@
+<h1 class="text-center">拾飯</h1>
+<%= link_to "新增餐廳", new_restaurant_path %>
+
+<table>
+  <thead>
+    <th>餐廳</th>
+    <th>營業時間</th>
+    <th>描述</th>
+    <th>照片</th>
+    <th> </th>
+  </thead>
+  <% @restaurants.each do |restaurant| %>
+    <tbody>
+      <td><%= restaurant.article %></td>
+      <td><%= restaurant.open_hours %></td>
+      <td><%= restaurant.description %></td>
+      <td><%= image_tag(restaurant.photo, width: '100px') if restaurant.photo.attached? %></td>  
+      <td>
+        <%= link_to "修改餐廳資料", edit_restaurant_path(restaurant) %> |
+        <%= link_to "刪除餐廳資料", restaurant_path(restaurant), method: :delete, data: { confirm: "確定刪除？" } %>
+      </td>
+
+    </tbody>
+  <% end %>
+</table>
